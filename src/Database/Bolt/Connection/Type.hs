@@ -20,7 +20,7 @@ data BoltCfg = BoltCfg { magic         :: Word32  -- ^'6060B017' value
                        , port          :: Int     -- ^Neo4j server port
                        , user          :: Text    -- ^Neo4j user
                        , password      :: Text    -- ^Neo4j password
-                       }
+                       } deriving (Show)
 
 instance Default BoltCfg where
   def = BoltCfg { magic         = 1616949271
